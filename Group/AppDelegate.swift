@@ -12,11 +12,25 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var storyBoard = UIStoryboard(name: "Main", bundle: nil)
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        Parse.setApplicationId("DXsvTSLgsKT03gSSqy6V5KbLwVpgfEjmEsKzzQUP", clientKey: "BXAzmCJhMtIVWhLVEiKIMzPCA5XI0Nt9NwvAOPVd")
+        
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "userDidLogout", name: userDidLoginNotification, object: nil)
+//        
+//        if User.currentUser != nil{
+//            // Got to the logged in screen
+//            println("Current User dectected: \(User.currentUser!.name)")
+//            var vc = storyBoard.instantiateViewControllerWithIdentifier("LoginNaviController") as? UIViewController
+//            window?.rootViewController = vc
+//            
+//        }
+        
         return true
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {
